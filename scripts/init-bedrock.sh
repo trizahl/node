@@ -30,7 +30,7 @@ if [ "$NODE_TYPE" = "archive" ]; then
     BEDROCK_TAR_DOWNLOAD="https://storage.googleapis.com/raas-op-geth-snapshots-d2a56/datadir-archive/$SNAPSHOT_FILENAME"
     echo "Using snapshot file: $SNAPSHOT_FILENAME"
   elif [ "$NETWORK_NAME" = "ink-mainnet" ]; then
-    SNAPSHOT_FILENAME=$(curl https://storage.googleapis.com/raas-op-geth-snapshots-e2025/datadir-archive/latest)
+    SNAPSHOT_FILENAME=$(curl -s https://storage.googleapis.com/raas-op-geth-snapshots-e2025/datadir-archive/latest)
     BEDROCK_TAR_DOWNLOAD="https://storage.googleapis.com/raas-op-geth-snapshots-e2025/datadir-archive/$SNAPSHOT_FILENAME"
     echo "Using snapshot file: $SNAPSHOT_FILENAME"
   fi

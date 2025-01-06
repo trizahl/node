@@ -24,7 +24,7 @@ A simple docker compose script for launching full / archive node for the Ink cha
 
 > Note: If you're not logged in as root, you'll need to log out and log in again after installation to complete the docker installation.
 
-Note: This command install docker and docker compose for Ubuntu. For windows and mac desktop or laptop, please use Docker Desktop. For other OS, please find instruction in Google.
+Note: This command installs docker and docker compose for Ubuntu. For windows and mac desktop or laptop, please use Docker Desktop. For other OS, please find instruction in Google.
 
 ```sh
 # Update and upgrade packages

@@ -24,7 +24,7 @@ A simple docker compose script for launching full / archive node for the Ink cha
 
 > Note: If you're not logged in as root, you'll need to log out and log in again after installation to complete the docker installation.
 
-Note: This command installs docker and docker compose for Ubuntu. For windows and mac desktop or laptop, please use Docker Desktop. For other OS, please find instruction in Google.
+Note: This command installs docker and docker compose for Ubuntu. For windows and mac desktop or laptop, please use Docker Desktop. For other OS, please find instructions in Google.
 
 ```sh
 # Update and upgrade packages
@@ -188,7 +188,7 @@ This will show the sync speed in blocks per minute and the time until sync is co
 Chain ID: 57073
 Please wait
 Blocks per minute: ...
-Hours until sync completed: ...
+Hours until sync is completed: ...
 ```
 
 ### Grafana dashboard

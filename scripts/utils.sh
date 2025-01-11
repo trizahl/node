@@ -2,7 +2,7 @@
 
 # extract: Extracts an archive into an output location.
 # Arguments:
-#   arc: Archive to to extract.
+#   arc: Archive to extract.
 #   loc: Location to extract to.
 function extract() {
   mkdir -p $2
@@ -11,7 +11,7 @@ function extract() {
 
 # extract: Extracts a zst archive into an output location.
 # Arguments:
-#   arc: ZST archive to to extract.
+#   arc: ZST archive to extract.
 #   loc: Location to extract to.
 function extractzst() {
   mkdir -p $2
@@ -20,7 +20,7 @@ function extractzst() {
 
 # extract: Extracts a lz4 archive into an output location.
 # Arguments:
-#   arc: lz4 archive to to extract.
+#   arc: lz4 archive to extract.
 #   loc: Location to extract to.
 function extractlz4() {
   mkdir -p $2

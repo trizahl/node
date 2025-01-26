@@ -12,7 +12,41 @@ services:
     image: us-docker.pkg.dev/oplabs-tools-artifacts/images/op-geth:v1.101411.4
     restart: unless-stopped
     stop_grace_period: 5m
+    entrypoint: /scripts/start-op-geth.shtart: unless-stopped
+    env_file:
+      - ./envs/common/healthcheck.env
+      - .env
+    ports:
+      - ${PORT__HEALTHCHECK_METRICS:-7300}:7300
+
+  op-geth:
+    image: us-docker.pkg.dev/oplabs-tools-artifacts/images/op-geth:v1.101411.4
+    restart: unless-stopped
+    stop_grace_period: 5m
     entrypoint: /scripts/start-op-geth.sh
+    env_file:
+      - ./envs/${NETWORK_NAME}/op-geth.env
+      - .env
+    volumes:
+      - ./envs/${NETWORK_NAME}/config:/chainconfig
+      - ./scripts/:/scriptstart: unless-stopped
+    env_file:
+      - ./envs/common/healthcheck.env
+      - .env
+    ports:
+      - ${PORT__HEALTHCHECK_METRICS:-7300}:7300
+
+  op-geth:
+    image: us-docker.pkg.dev/oplabs-tools-artifacts/images/op-geth:v1.101411.4
+    restart: unless-stopped
+    stop_grace_period: 5m
+    entrypoint: /scripts/start-op-geth.sh
+    env_file:
+      - ./envs/${NETWORK_NAME}/op-geth.env
+      - .env
+    volumes:
+      - ./envs/${NETWORK_NAME}/config:/chainconfig
+      - ./scripts/:/scripts
     env_file:
       - ./envs/${NETWORK_NAME}/op-geth.env
       - .env
